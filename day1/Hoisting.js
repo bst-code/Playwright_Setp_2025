@@ -11,4 +11,6 @@ var a = 30
 
 console.log(c)
 const c =0
-c = 10
+
+
+d= 30
