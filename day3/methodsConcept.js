@@ -44,3 +44,12 @@ sub("Bala", 36)
 
 addTwoNumber()
 
+
+// Create a new Date object, which represents the current date and time
+const currentDate = new Date();
+
+// Get the full year (four digits) from the Date object
+const currentYear = currentDate.getFullYear();
+
+// Display the current year
+console.log(currentYear);

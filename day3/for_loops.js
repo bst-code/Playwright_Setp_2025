@@ -8,16 +8,14 @@
 //     {
 //         break;
 //     }
-    
+
 // }
 
-for(let i = 0; i <= 100; i++ )
-{
-    if(i === 20)
-    {
-        continue; 
+for (let i = 0; i <= 100; i++) {
+    if (i === 20) {
+        continue;
     }
-    
+
     console.log("Give sweets --> ", i);
 }
 
