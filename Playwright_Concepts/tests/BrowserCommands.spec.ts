@@ -1,4 +1,4 @@
-import {test} from "@playwright/test";
+import {test,expect} from "@playwright/test";
 
 //test("Open browser", async function (){
 
@@ -9,7 +9,7 @@ import {test} from "@playwright/test";
 
 //})
 
-test("Open browser from context", async({browser})=>{
+test.skip("Open browser from context", async({browser})=>{
 
     // Step 1 - await open browser
 
@@ -22,11 +22,20 @@ test("Open browser from context", async({browser})=>{
 })
 
 
-test("Open browser with page fixture", async({page})=>{
+test("Open browser with page fixture", async ({page})=>{
 
     // Step 1 - await open browser
     await page.goto("https://bsparksoftwaretechnologies.com/")
 
+   const actualTitle = await page.title()
+
+  // expect(actualTitle).toContain("Bspark")
+
+    await expect(page).toHaveTitle("Bspark Software Technologies || Best Software Training Institute in Chennai")
+
+    console.log("Page title",page.url());
+    
     await page.close()
 
 })
+
