@@ -1,5 +1,5 @@
 {
-  "name": "playwright_basic",
+  "name": "playwright_concepts",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.55.1",
-    "@types/node": "^24.5.2"
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^24.7.2"
   }
 }
