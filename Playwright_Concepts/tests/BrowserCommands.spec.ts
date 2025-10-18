@@ -9,7 +9,7 @@ import {test,expect} from "@playwright/test";
 
 //})
 
-test.skip("Open browser from context", async({browser})=>{
+test("Open browser from context", async({browser})=>{
 
     // Step 1 - await open browser
 
@@ -22,7 +22,7 @@ test.skip("Open browser from context", async({browser})=>{
 })
 
 
-test("Open browser with page fixture", async ({page})=>{
+test.only('Open browser with page fixture', async ({page})=>{
 
     // Step 1 - await open browser
     await page.goto("https://bsparksoftwaretechnologies.com/")
@@ -33,8 +33,17 @@ test("Open browser with page fixture", async ({page})=>{
 
     await expect(page).toHaveTitle("Bspark Software Technologies || Best Software Training Institute in Chennai")
 
-    console.log("Page title",page.url());
+    console.log("Page Url",page.url());
     
+    await page.goBack()
+    await page.waitForTimeout(3000) //It will alt the sys for given time period
+
+    await page.goForward()
+    await page.waitForTimeout(3000)
+
+    await page.reload()
+    await page.waitForTimeout(3000)
+
     await page.close()
 
 })
