@@ -1,0 +1,9 @@
+//input[@name='gender']
+//input[@value='1']
+//input[@name='gender' and @value='-1']
+//input[@name='gender' or @value='-1']
+(//input[@name='gender'])[3]
+
+
+//[text()='text to find']
+//label[text()='Select your pronoun']/following-sibling::select
