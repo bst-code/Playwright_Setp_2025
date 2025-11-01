@@ -33,6 +33,4 @@ test("Locate Elements", async ({page})=>{
    console.log(await homePageButtonEle.textContent());
    await homePageButtonEle.click()
    await page.waitForTimeout(3000)
-
-
 })
