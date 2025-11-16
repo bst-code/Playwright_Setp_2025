@@ -33,9 +33,6 @@ for(let i = 0; i< rowSize; i++)
 actualListSorted.push("bala");
 console.log("actualListSorted -->", actualListSorted);
 
-expect(actualListSorted).toStrictEqual(act
-    ualList)
-
-
+expect(actualListSorted).toStrictEqual(actualList)
 await page.waitForTimeout(10000)
 })
