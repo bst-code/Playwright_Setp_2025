@@ -19,6 +19,8 @@ export default defineConfig({
   {
     timeout: 10*1000
   },
+
+  retries:2,
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     

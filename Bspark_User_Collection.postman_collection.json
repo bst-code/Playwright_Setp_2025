@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "795da3fc-de40-4956-8dbc-8234ba62dab9",
+		"name": "Bspark_User_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2538531",
+		"_collection_link": "https://thavamab.postman.co/workspace/Team-Workspace~bf1098a9-a18e-4c0e-82c9-3a7b6f2e0dec/collection/2538531-795da3fc-de40-4956-8dbc-8234ba62dab9?action=share&source=collection_link&creator=2538531"
+	},
+	"item": [
+		{
+			"name": "getAllusers",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/users",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createNewUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Bala\",\r\n  \"email\": \"bala@bspark.com\",\r\n  \"number\": \"9869458698597\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/users",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateuser",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Vijay\",\r\n  \"email\": \"vijya@bspark\",\r\n  \"number\": \"4445556666\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/users/16",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"16"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
