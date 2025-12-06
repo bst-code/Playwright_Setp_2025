@@ -21,3 +21,4 @@ const getData = async ()=>
 
 
     getData()
+
