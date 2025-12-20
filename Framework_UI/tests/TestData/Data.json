@@ -1,0 +1,11 @@
+{
+  "TC_001": {
+    "username": "admin",
+    "password": "admin",
+    "expectedText": "Product Management"
+  },
+  "TC_002": {
+    "username": "wronguser",
+    "password": "wrongpass"
+  }
+}
