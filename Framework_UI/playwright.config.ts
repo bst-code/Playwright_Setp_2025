@@ -1,17 +1,18 @@
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig, devices, firefox } from '@playwright/test';
+import type { TestOptions } from './test-options';
 
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
-// import dotenv from 'dotenv';
-// import path from 'path';
-// dotenv.config({ path: path.resolve(__dirname, '.env') });
+ import dotenv from 'dotenv';
+ import path from 'path';
+ dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
-export default defineConfig({
+export default defineConfig<TestOptions>({
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: false,
@@ -19,27 +20,57 @@ export default defineConfig({
 
   retries: 1,
   reporter: 'html',
-  timeout: 10*1000,
+  timeout: 60*1000,
+
   expect:{
-    timeout: 6*1000,
+    timeout: 90*1000,
   },
   use: {
-    baseURL: 'https://playground.bsparksoftwaretechnologies.com',
+    baseURL: process.env.ENV ==="QA" ? 'https://qa.playground.bsparksoftwaretechnologies.com' :
+             process.env.ENV ==="STG" ? 'https://stg.playground.bsparksoftwaretechnologies.com':
+             "https://playground.bsparksoftwaretechnologies.com",
+
+    GMAIL_URL: 'https://www.gmail.com',
     trace: 'on-first-retry',
     headless: false,
     viewport: null,
     launchOptions: {
       args: ['--start-maximized'],
-    }
+    },
+
+    video:{
+      mode:"on",
+      size:{
+        width: 1920,
+        height: 1080
+      }
+    },
+
+    actionTimeout: 30 * 1000,
+    navigationTimeout: 40 * 1000
   },
+
+
+  
+  
 
   /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
-     }
-     ,
+     },
+
+    //  {
+    //   name: 'QA',
+    //   testMatch: 'loginTest.spec.ts',
+    //    use: {
+    //          baseURL: 'https://qa.playground.bsparksoftwaretechnologies.com',
+    //          browserName: 'firefox',
+    //          GMAIL_URL: 'https://www.qa.gmail.com',
+             
+    //    }
+    //  }
 
     // {
     //   name: 'firefox',

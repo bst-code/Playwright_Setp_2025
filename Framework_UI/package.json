@@ -1,23 +1,22 @@
 {
    "name": "framework_ui",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-
-  "dependencies": {
-    "playwright": "^1.57.0"
-  },
-  "devDependencies": {
-    "@playwright/test": "^1.57.0",
-    "@types/node": "^24.10.1"
-  },
-  "scripts": {
-    "test" : "npx playwright test",
-    "chromium": "npx playwright test --project=chromium",
-    "firefox": "npx playwright test --project=firefox",
-    "reports":  "npx playwright show-report",
-    "ui": "npx playwright test --ui",
-    "debug": "npx playwright test --project=chromium --debug"
-
-  }
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "dependencies": {
+      "playwright": "^1.57.0"
+   },
+   "devDependencies": {
+      "@playwright/test": "^1.57.0",
+      "@types/node": "^24.10.1",
+      "dotenv": "^17.2.3"
+   },
+   "scripts": {
+      "test": "npx playwright test",
+      "chromium": "npx playwright test --project=chromium",
+      "firefox": "npx playwright test --project=firefox",
+      "reports": "npx playwright show-report",
+      "ui": "npx playwright test --ui",
+      "debug": "npx playwright test --project=chromium --debug"
+   }
 }

@@ -1,4 +1,4 @@
-import { Locator, Page } from "@playwright/test";
+import { Locator, Page, TestInfo } from "@playwright/test";
 
 export class PlaywrightBaseClass
 {
@@ -12,30 +12,40 @@ constructor(p:Page)
 
 async enterText(element: Locator, textToEnter: string)
 {
-    element.fill(textToEnter)
+    await element.fill(textToEnter)
+    //element.pressSequentially(textToEnter,{delay:120})
+   
 }
 
 async clearText(element: Locator)
 {
-    element.clear()
+   await element.clear()
 }
 
 async clickElement(element: Locator)
 {
-    element.click()
+   await element.click()
 }
 
 async getElementText(element: Locator)
 {
-   let data = element.textContent()
+   let data = await element.textContent()
    return data
 }
 
 async getElementAttribute(element: Locator, attributeName: string)
 {
-  let data =  element.getAttribute(attributeName)
+  let data = await element.getAttribute(attributeName)
   return data
 }
 
+async getFullPageScreenshot(page: Page, testInfo : TestInfo)
+{
+    await testInfo.attach("Taking Screenshot on first Retry", {
+        body: await page.screenshot(),
+        contentType: "image/png"
+
+    })
+}
 
 }
