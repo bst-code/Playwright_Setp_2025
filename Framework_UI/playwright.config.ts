@@ -47,11 +47,12 @@ export default defineConfig<TestOptions>({
     },
 
     actionTimeout: 30 * 1000,
-    navigationTimeout: 40 * 1000
+    navigationTimeout: 40 * 1000,
   },
 
+  globalSetup: require.resolve('./global_setup.ts'),
+  globalTeardown: require.resolve('./global_teardown.ts'),
 
-  
   
 
   /* Configure projects for major browsers */

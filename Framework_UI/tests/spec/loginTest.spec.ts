@@ -39,7 +39,7 @@ test.only("Login With Valid Details", async({page}, testInfo)=>
     }
 
    await  pageManger.getDashboardPage().clickProductMangementLink()
-   await pageManger.getLoginPage().loginToApp("admin","admin")
+   await pageManger.getLoginPage().loginToApp("admin@test.com","test123")
    let actualData = await  pageManger.getHomePage().verifyHomePageText()
    expect.soft(actualData).toContain(TC_001.expectedText)
    await page.waitForTimeout(5000)

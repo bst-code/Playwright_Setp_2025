@@ -2,7 +2,7 @@
   "TC_001": {
     "username": "admin",
     "password": "admin",
-    "expectedText": "Product Management"
+    "expectedText": "Bspark Dashboard"
   },
   "TC_002": {
     "username": "wronguser",

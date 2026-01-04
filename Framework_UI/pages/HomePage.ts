@@ -9,7 +9,7 @@ export class HomePage extends PlaywrightBaseClass
     constructor(page : Page)
     {
         super(page)
-        this.HomePageText = page.locator("//h2[contains(@class, 'ProductManagement_heading__')]")
+        this.HomePageText = page.locator("//h1[contains(@class, 'ProductDashboard_title_')]")
     }
 
     async verifyHomePageText()

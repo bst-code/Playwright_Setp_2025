@@ -11,8 +11,8 @@ export class LoginPage extends PlaywrightBaseClass
     constructor(page: Page)
     {
         super(page)
-        this.UserNameEle = page.locator("#userName")
-        this.PasswordEle = page.locator("#passWord")
+        this.UserNameEle = page.locator("#username")
+        this.PasswordEle = page.locator("#pwd")
         this.LoginEle    = page.locator("//button[text()='Login']")
         this.ErrorMsg    = page.locator("//p[@class='error']")
     }
