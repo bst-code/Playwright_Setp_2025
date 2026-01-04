@@ -1,0 +1,171 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login-testcases;validate-with-invalid-data",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Validate with invalid data",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 878706200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "i Delete data from DB",
+            "match": {
+              "location": "src\\tests\\stepsDefinitions\\Common.steps.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51198399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I login to Product login page",
+            "match": {
+              "location": "src\\tests\\stepsDefinitions\\Login.steps.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 862727799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I enter userName as \"admin\" and password as \"pwd\"",
+            "match": {
+              "location": "src\\tests\\stepsDefinitions\\Login.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7078500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I Validate error message",
+            "match": {
+              "location": "src\\tests\\stepsDefinitions\\Login.steps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1399500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 690226299
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-testcases;validate-with-empty-data",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Validate with Empty data",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 819931600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "i Delete data from DB",
+            "match": {
+              "location": "src\\tests\\stepsDefinitions\\Common.steps.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2521899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I login to Product login page",
+            "match": {
+              "location": "src\\tests\\stepsDefinitions\\Login.steps.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 726620200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I enter userName as \"\" and password as \"\"",
+            "match": {
+              "location": "src\\tests\\stepsDefinitions\\Login.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1140599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I Validate error message",
+            "match": {
+              "location": "src\\tests\\stepsDefinitions\\Login.steps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 454100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 507465200
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login-testcases",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login testcases",
+    "tags": [],
+    "uri": "src\\tests\\features\\Login.feature"
+  }
+]
