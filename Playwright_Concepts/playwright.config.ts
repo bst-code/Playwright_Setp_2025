@@ -30,6 +30,7 @@ export default defineConfig({
     launchOptions: {
       args: ['--start-maximized'],
     },
+    storageState: './storage/auth.json'
     
   },
 
