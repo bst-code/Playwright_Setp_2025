@@ -1,9 +1,8 @@
 import { Given, When, Then } from "@cucumber/cucumber"
-import { page } from "../hook/Hooks";
-
-Given('I login to Product login page',async () => {
+import { CustomWorld } from "../utils/world";
+Given('I login to Product login page',async function(this:CustomWorld)  {
     
-    await page.goto("https://playground.bsparksoftwaretechnologies.com/")
+    await this.page.goto("https://playground.bsparksoftwaretechnologies.com/")
     console.log("Application opened");
     
 });

@@ -12,7 +12,9 @@ test("Get API response from Networktab", async ({page})=>{
     const body = await res.json()
    
     console.log(res.status());
-    
+    expect(res.status()).toBe(401)
+    console.log(res.statusText());
+
     console.log((body));
     
    
